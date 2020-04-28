@@ -11,16 +11,16 @@ random_hashtagze = random.choice(hashtagze)
 insta = instabot("", '') #Add Username and Add Password Respectively
 
 
-insta.set_window(210, 708)
+insta.set_window(210, 708) #Seetting up Window Height and Width 
 
-insta.login()
+insta.login() # Login To Account
 
 
 
 insta.select_now()
 
-insta.search_hashtags(random_hashtagze)
+insta.search_hashtags(random_hashtagze) #Searching hashtags
 
-insta.OpenWindowtolike()
-insta.followlike(3)
+insta.OpenWindowtolike() #opening Window to Perform Following Like Actions
+insta.followlike(3) #Number of People You need to Follow
 
