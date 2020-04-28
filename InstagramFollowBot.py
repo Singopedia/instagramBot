@@ -17,7 +17,7 @@ class instabot:
         self.password = password
         # self.driver = driver.Chrome()
         self.bot = webdriver.Chrome (
-            executable_path="C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe")
+            executable_path="C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe") #Change This if Your Chrome driver is on Different Location
 
     def set_window(self, w, h):
         bot = self.bot
@@ -86,43 +86,5 @@ class instabot:
         waiting = int(waiting1)
 
         print ('All the Things are Done')
-        time.sleep(1)
-        print(f'Sir, We will be Unfollowing Them all in {unfollow_them_in_days} Days')
-        pickle.dump (bot.get_cookies (), open ("cookies.pkl", "wb"))
-        time.sleep(2)
-
-
-
-        if waiting == today_final_date:
-
-            cookies = pickle.load (open ("cookies.pkl", "rb"))
-            for cookie in cookies:
-                bot.add_cookie (cookie)
-
-
-            print('Lets Unfollow Them Allll')
-
-            def unfollow(amount):
-
-                print("unfollowing NOW")
-                bot = self.bot
-                bot.get(f"https://www.instagram.com/{self.username}")
-                bot.find_element_by_xpath('//li[3]//a[1]').click()
-
-                time.sleep(2)
-
-                z = 1
-
-                while z <= amount:
-
-                    if bot.find_elements_by_link_text("Following"):
-
-                        bot.find_element_by_link_text('Following')[0].click()
-                        time.sleep(1)
-                        z += 1
-
-                    else:
-                        return
-
-            unfollow(self.amount)
-            bot.close()
+        time.sleep(3)
+        bot.close()
