@@ -2,11 +2,13 @@ from InstagramFollowBot import instabot
 import time
 import random
 
+#Write Down Your Preffered Hashtags.
+
 hashtagze = ["pubggaming", "pubg", 'arcadepubg', 'pubgmontage', 'pubgmemes', 'pubgstory', 'starchallenge', 'cradles', 'meme', 'funnypubg', 'mememaker']
 random_hashtagze = random.choice(hashtagze)
 
 
-insta = instabot("maxsins_gaming", 'Shahid@1974')
+insta = instabot("", '') #Add Username and Add Password Respectively
 
 
 insta.set_window(210, 708)
